@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Portfolio - Showcasing projects in software development, hardware, and network design">
+    <title>Masitha's Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
+    <link rel="stylesheet" href="assets/css/certificate.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.10.3/simple-lightbox.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Portfolio</div>
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <!-- <li><a href="#education">Education</a></li> -->
+            <li><a href="#certificate">Certificate</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 data-aos="fade-up">Masitha Mirzaky Firdaus</h1>
+            <p data-aos="fade-up" data-aos-delay="200">From AI models to IoT circuits to network designs — I love making tech click.</p>
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+                <a href="#projects" class="btn primary">View Projects</a>
+            </div>
+        </div>
+        <div class="stars"></div>
+    </section>
+
+<section id="about" class="about">
+    <h2 data-aos="fade-up">About Me</h2>
+    <div class="about-content">
+        <div class="about-picture" data-aos="fade-up" style="display:flex;align-items:center;justify-content:center;">
+            <img src="assets/image/profile.jpg" alt="Profile Picture" style="width:200px;height:200px;border-radius:50%;object-fit:cover;">
+        </div>
+        <div class="about-text" data-aos="fade-up" style="display:flex;align-items:center;justify-content:center;">
+            <p>I’m a Telecommunication Engineering graduate from Politeknik Elektronika Negeri Surabaya with a passion for exploring how AI and IoT can solve real-world problems. I’ve worked on projects like building deep learning models for vehicle detection to support automated toll systems and optimizing a road damage detection model on Jetson AGX Orin. Beyond the technical side, I love collaborating with others, sharing ideas, and making projects both impactful and fun to work on.</p>
+            
+            <div class="social-info">
+                <a href="mailto:masithamf@gmail.com" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/masithamf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/masithamf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/masithamf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>        
+        </div>
+    </div>
+    <div class="stars"></div>
+</section>
+
+<!-- <section id="education" class="education">
+    <h2 data-aos="fade-up">Education & Training</h2>
+    <div class="timeline" data-aos="fade-up"> -->
+        <!-- Education timeline content here -->
+    <!-- </div>
+    <div class="stars"></div>
+</section> -->
+
+<section id="experience" class="experience">
+    <h2 data-aos="fade-up">Experience</h2>
+    <div class="experience-grid">
+        <div class="experience-card" onclick="showExperienceModal(1)" data-aos="fade-up">
+            <img src="assets/image/ptnw.jpg" alt="Experience 1" class="project-image">
+            <div class="project-info">
+                <h3 class="project-title">PT Nexwave</h3>
+                <p class="project-description">I conducted site surveys and inventory checks to ensure materials were ready for installation and executed on-site network module installations according to guidelines. I managed daily reporting by collecting field data, monitoring safety compliance, and maintaining attendance for employees. Additionally, I handled monthly ATP fund requests and maintained accurate clock-out records to support project reporting.</p>
+            </div>
+        </div>
+        <div class="experience-card" onclick="showExperienceModal(2)" data-aos="fade-up">
+            <img src="assets/image/bangkit.jpg" alt="Experience 2" class="project-image">
+            <div class="project-info">
+                <h3 class="project-title">Bangkit Academy 2024</h3>
+                <p class="project-description">I have a strong foundation in machine learning, covering both fundamental and advanced concepts, with hands-on experience using TensorFlow for real-world applications. Skilled in data analysis, Python automation, and deploying models on the web, I enjoy building end-to-end AI solutions. One of my key projects was developing an AI-powered vehicle detection application for toll gates. I graduated with a final transcript score of 90.30, reflecting my commitment and strong academic performance.</p>
+            </div>
+        </div>
+    </div>
+    <div class="stars"></div>
+</section>
+
+<section id="projects" class="projects">
+    <h2 data-aos="fade-up">Projects</h2>
+    <div class="project-grid">
+        <div class="project-card" onclick="showProjectModal(1)" data-aos="fade-up">
+            <img src="assets/image/prune.jpg" alt="Project 1" class="project-image">
+            <div class="project-info">
+                <h3 class="project-title">Pruned SSD MobileNetV2 for Road Damage Detection System</h3>
+                <p class="project-description">Road maintenance is often hampered by the difficulty of detecting and classifying damages in real time, especially on resource-constrained edge devices. To solve this, I developed and optimized a real-time AI model for road damage detection, capable of identifying potholes, longitudinal cracks, and alligator cracks. I applied pruning as a model compression technique to significantly reduce model size, allowing faster inference on the Jetson AGX Orin. The optimized model delivered improved real-time performance, achieving lower inference time and higher FPS, making it more suitable for deployment in smart city and intelligent transportation systems.</p>
+            </div>
+        </div>
+        <div class="project-card" onclick="showProjectModal(2)" data-aos="fade-up">
+            <img src="assets/image/caps.jpg" alt="Project 2" class="project-image">
+            <div class="project-info">
+                <h3 class="project-title">Wheelify: AI Vehicle Detection App</h3>
+                <p class="project-description">Manual toll collection is often inefficient and time-consuming, leading to traffic congestion and higher operational costs. To address this, I developed an AI-powered vehicle detection and classification application as a prototype for an automated toll collection (ETC) system. I built the core model using TensorFlow with Transfer Learning on MobileNetV2 for efficient image feature extraction, trained on a custom dataset of 4,000 images. The final model achieved 81.05% accuracy, demonstrating the potential of AI to streamline toll operations and reduce human error.</p>
+            </div>
+        </div>
+        <div class="project-card" onclick="showProjectModal(3)" data-aos="fade-up">
+            <img src="assets/image/ftth1.jpg" alt="Project 3" class="project-image">
+            <div class="project-info">
+                <h3 class="project-title">Fiber to the Home (FTTH) Network Design</h3>
+                <p class="project-description">In this project, I worked on designing a Fiber-to-the-Home (FTTH) network, starting with the creation of a network layout using Google Earth to map the number of homes and required passive components. Careful planning was essential because FTTH design directly impacts cost efficiency, signal quality, and long-term scalability of the network. I conducted equipment requirement analysis and performed Power Budget calculations to ensure optimal signal distribution. Finally, I used OptiSystem software to design and simulate the network based on these parameters, successfully demonstrating a practical and efficient fiber optic solution ready for deployment.</p>
+            </div>
+        </div>
+        <div class="project-card" onclick="showProjectModal(4)" data-aos="fade-up">
+            <img src="assets/image/esp.jpg" alt="Project 4" class="project-image">
+            <div class="project-info">
+                <h3 class="project-title">ESP32-based Room Temperature Sensor</h3>
+                <p class="project-description">For this project, I designed and developed a room temperature sensor system from scratch. Starting with PCB design in Eagle, I assembled and soldered all components onto the board before programming the system in C++ using Arduino IDE. I chose the ESP32 microcontroller because it offers higher processing power, built-in connectivity, and flexibility compared to simpler boards, making it well-suited for real-time sensor applications. The system used multi-color LEDs to indicate different temperature ranges, while an LCD provided detailed real-time readings. Specifically, when the temperature exceeded 27°C, the red LED would turn on, signaling a higher range, whereas when it dropped below 27°C, the blue LED would light up to indicate a cooler condition. This project demonstrated full-cycle development, from hardware design to embedded programming.</p>
+            </div>
+        </div>
+        <div class="project-card" onclick="showProjectModal(5)" data-aos="fade-up">
+            <img src="assets/image/op.jpg" alt="Project 5" class="project-image">
+            <div class="project-info">
+                <h3 class="project-title">Op-Amp based Light Sensor using Light Dependent Resistor</h3>
+                <p class="project-description">This project was a light sensor system that I designed and assembled on a PCB to detect changes in ambient lighting. I used an operational amplifier (op-amp) as a comparator because of its reliability in distinguishing voltage levels, making it ideal for decision-making in sensor-based circuits. The system activates an LED indicator when low light is detected, providing a straightforward yet effective real-time visual output. This approach offered both simplicity and accuracy, while also showcasing practical hardware implementation on a custom PCB.</p>
+            </div>
+        </div>
+        <div class="project-card" onclick="showProjectModal(6)" data-aos="fade-up">
+            <img src="assets/image/web.jpg" alt="Project 6" class="project-image">
+            <div class="project-info">
+                <h3 class="project-title">Website for Book Sales</h3>
+                <p class="project-description">Managing book sales manually often led to inefficiencies in tracking stock, prices, and sales reports. To address this, I developed a dual-access book sales website that enables cashiers to process purchases while allowing managers to monitor inventory, distributors, supply records, and sales reports in real time. Built with PHP and CSS for the interface and SQL for the database, the system streamlined daily transactions and reporting, making operations more efficient and organized.</p>
+            </div>
+        </div>
+        <div class="project-card" onclick="showProjectModal(7)" data-aos="fade-up">
+            <img src="assets/image/java.jpg" alt="Project 7" class="project-image">
+            <div class="project-info">
+                <h3 class="project-title">OCR Scanner Application</h3>
+                <p class="project-description">I noticed how time-consuming it can be to manually retype long texts from images or printed documents. To solve this, I developed an Android-based OCR application called “OCR Scanner”, which converts images into editable digital text. The app supports camera and gallery input, includes image cropping for precision, and leverages OCR libraries for accurate extraction. With its simple one-page UI, users can instantly convert text and copy it for further use, making the process fast, reliable, and error-free.</p>
+            </div>
+        </div>
+    </div>
+    <div class="stars"></div>
+</section>
+
+<section id="skills" class="skills-section">
+    <h2 data-aos="fade-up">My Skills</h2>
+    <div class="skills-container">
+        <div class="skill-card" data-aos="fade-up">
+            <div class="skill-icon">
+                <i class="fas fa-file-alt"></i>
+            </div>
+            <div class="skill-content">
+                <h3>Microsoft Office & Google Workspace</h3>
+                <p>Used daily during college and internship at PT Nexwave for documentation, reporting, and project administration.</p>
+            </div>
+        </div>
+        <div class="skill-card" data-aos="fade-up">
+            <div class="skill-icon">
+                <i class="fab fa-python"></i>
+            </div>
+            <div class="skill-content">
+                <h3>Python</h3>
+                <p>Built AI models for vehicle detection and road damage detection; deployed optimized TensorFlow models on Jetson AGX Orin.</p>
+            </div>
+        </div>
+        <div class="skill-card" data-aos="fade-up">
+            <div class="skill-icon">
+                <i class="fas fa-mug-saucer"></i>
+            </div>
+            <div class="skill-content">
+                <h3>Java</h3>
+                <p>Developed an OCR Scanner Android app that converts images to editable text.</p>
+            </div>
+        </div>
+        <div class="skill-card" data-aos="fade-up">
+            <div class="skill-icon">
+                <i class="fas fa-microchip"></i>
+            </div>
+            <div class="skill-content">
+                <h3>C++ & Arduino IDE</h3>
+                <p>Programmed ESP32-based room temperature sensor with I2C LCD, including PCB design and microcontroller coding.</p>
+            </div>
+        </div>
+        <div class="skill-card" data-aos="fade-up">
+            <div class="skill-icon">
+                <i class="fas fa-code"></i>
+            </div>
+            <div class="skill-content">
+                <h3>PHP, HTML, CSS, SQL</h3>
+                <p>Built a dual-access book sales website with cashier and manager features, integrating sales reporting and inventory tracking.</p>
+            </div>
+        </div>
+        <div class="skill-card" data-aos="fade-up">
+            <div class="skill-icon">
+                <i class="fas fa-code-branch"></i>
+            </div>
+            <div class="skill-content">
+                <h3>Visual Studio Code</h3>
+                <p>Used as the main IDE for web development and Python-based projects.</p>
+            </div>
+        </div>
+        <div class="skill-card" data-aos="fade-up">
+            <div class="skill-icon">
+                <i class="fas fa-network-wired"></i>
+            </div>
+            <div class="skill-content">
+                <h3>Networking & Systems</h3>
+                <p>Simulated networking systems during academic projects using Cisco Packet Tracer and GNS3.</p>
+            </div>
+        </div>
+        <div class="skill-card" data-aos="fade-up">
+            <div class="skill-icon">
+                <i class="fas fa-project-diagram"></i>
+            </div>
+            <div class="skill-content">
+                <h3>Circuit Design & Simulation Tools</h3>
+                <p>Designed and simulated PCB for light and temperature sensor projects using EAGLE and designed FTTH network, including power budget simulation and signal distribution using OptiSystem.</p>
+            </div>
+        </div>
+        <div class="skill-card" data-aos="fade-up">
+            <div class="skill-icon">
+                <i class="fas fa-paint-brush"></i>
+            </div>
+            <div class="skill-content">
+                <h3>Canva & Adobe Lightroom</h3>
+                <p>Designed visual content and managed digital media for organizational activities (UKKI Instagram and event promotions).</p>
+            </div>
+        </div>
+    </div>
+    <div class="stars"></div>
+</section>
+
+
+
+<section id="certificate" class="certificate-section">
+    <h2 data-aos="fade-up">Certificates</h2>
+    <div class="certificate-categories">
+        <div class="category-card" data-aos="fade-up">
+            <h3>Training Certificate</h3>
+            <div class="certificates-grid">
+                <div class="certificate-item">
+                    <img src="assets/image/bangkitsertif.jpg" alt="Completion of Bangkit Academy 2024">
+                </div>
+                <div class="certificate-item">
+                    <img src="assets/image/BNSP.jpg" alt="Access Coverage Area Certificate">
+                </div>
+                <div class="certificate-item">
+                    <img src="assets/image/analisisdata.jpg" alt="Data Analysis Certificate">
+                </div>
+                <div class="certificate-item">
+                    <img src="assets/image/python.jpg" alt="Python Programming Certificate">
+                </div>
+                <div class="certificate-item">
+                    <img src="assets/image/ml.jpg" alt="Machine Learning Specialization Certificate">
+                </div>
+                <div class="certificate-item">
+                    <img src="assets/image/computervision.jpg" alt="Computer Vision Certificate">
+                </div>
+            </div>
+        </div>
+        
+        <div class="category-card" data-aos="fade-up">
+            <h3>Appreciation Certificate</h3>
+            <div class="certificates-grid">
+                <div class="certificate-item">
+                    <img src="assets/image/IESp.jpg" alt="IES Presenter Certificate">
+                </div>
+                <div class="certificate-item">
+                    <img src="assets/image/IESpp.jpg" alt="IES Author Certificate">
+                </div>
+                <div class="certificate-item">
+                    <img src="assets/image/FPC.jpg" alt="Final Project Competition Certificate">
+                </div>
+                <div class="certificate-item">
+                    <img src="assets/image/KP.jpg" alt="internship Certificate">
+                </div>
+            </div>
+        </div>
+
+        <div class="category-card" data-aos="fade-up">
+            <h3>Organization Certificate</h3>
+            <div class="certificates-grid">
+                <div class="certificate-item">
+                    <img src="assets/image/UKKI.jpg" alt="UKKI committee Certificate">
+                </div>
+                <div class="certificate-item">
+                    <img src="assets/image/UKKIpanit.jpg" alt="UKKI committee Certificate">
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+    <div class="stars"></div>
+</section>
+<footer>
+    <p>&copy; Masitha's Portfolio </p>
+</footer>
+
+    <div id="project-modal" class="experience-modal">
+        <div class="experience-modal-content">
+            <span class="close-modal" onclick="closeProjectModal()">&times;</span>
+            <div class="modal-header">
+                <h2 id="project-title">Project Title</h2>
+            </div>
+            <div class="modal-body">
+                <div class="project-gallery">
+                    <!-- Project images will be loaded here -->
+                </div>
+                <div class="project-details">
+                    <p id="project-description"></p>
+                    <div class="tech-stack">
+                        <!-- Tech stack will be loaded here -->
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="github-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="experience-modal" class="experience-modal">
+        <div class="experience-modal-content">
+            <span class="close-modal" onclick="closeExperienceModal()">&times;</span>
+            <div class="modal-header">
+                <h2 id="experience-title">Experience Title</h2>
+            </div>
+            <div class="modal-body">
+                <div class="experience-gallery">
+                    <!-- Experience images will be loaded here -->
+                </div>
+                <div class="experience-details">
+                    <p id="experience-description"></p>
+                    <div class="skills-gained">
+                        <!-- Skills gained will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.10.3/simple-lightbox.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/certificate.js"></script>
+    </body>
+</html>
